@@ -9,12 +9,21 @@ function MissedGoal() {
   }
 
 
-const Goal = (props)=> {
-    const isGoal = props.isGoal;
-    if (isGoal) {
-      return <MadeGoal/>;
+//   const Goal = (props)=> {
+//     const isGoal = props.isGoal;
+//     if (isGoal) {
+//       return <MadeGoal/>;
+//     }
+//     return <MissedGoal/>;
+//   }
+
+  const Goal = (props)=> {
+      const isGoal = props.isGoal;
+      return (
+        <>
+          { isGoal ? <MadeGoal/> : <MissedGoal/> }
+        </>
+      );
     }
-    return <MissedGoal/>;
-  }
 
 export default Goal;
