@@ -98,3 +98,20 @@ Then we define our <Routes>. An application can have multiple <Routes>. Our basi
 
 >>>
 Using memo will cause React to skip rendering a component if its props have not changed.
+
+>>>
+
+Styling React Using CSS
+
+Inline styling
+CSS stylesheets
+CSS Modules
+
+Create a new file called "App.css" and insert some CSS code in it:
+Import the stylesheet in your application: {import './App.css';}
+
+CSS Modules
+
+Create the CSS module with the .module.css extension, example: my-style.module.css.
+use it like this;
+import styles from './my-style.module.css'; 

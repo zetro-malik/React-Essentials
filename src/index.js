@@ -26,6 +26,8 @@ import NoPage from "./pages/nopage";
 
 import './app.css'
 
+import CarCss from "./examples/cssModules";
+
 import AppWithMemo from "./examples/userMemo";
 
 export default function App() {
@@ -44,4 +46,4 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<AppWithMemo />);
+root.render(<CarCss />);
