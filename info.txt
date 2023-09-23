@@ -1,0 +1,9 @@
+React is a JavaScript library for building user interfaces.
+
+React is used to build single-page applications.
+
+React allows us to create reusable UI components.
+
+>>>
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
+React only changes what needs to be changed!
