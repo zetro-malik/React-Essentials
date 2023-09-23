@@ -7,3 +7,55 @@ React allows us to create reusable UI components.
 >>>
 Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating, before making the changes in the browser DOM.
 React only changes what needs to be changed!
+
+
+>>>
+React renders HTML to the web page by using a function called createRoot() and its method render().
+
+The createRoot() function takes one argument, an HTML element.
+
+The purpose of the function is to define the HTML element where a React component should be displayed.
+The render() method is then called to define the React component that should be rendered.
+
+>>>
+What is JSX?
+
+JSX stands for JavaScript XML.
+
+JSX allows us to write HTML in React.
+
+JSX makes it easier to write and add HTML in React.
+
+JSX allows us to write HTML elements in JavaScript and place them in the DOM without any createElement()  and/or appendChild() methods.
+
+JSX is an extension of the JavaScript language based on ES6, and is translated into regular JavaScript at runtime.
+
+With JSX you can write expressions inside curly braces { }.
+const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+
+JSX will throw an error if the HTML is not correct, or if the HTML misses a parent element.
+
+
+>>>
+
+Components are like functions that return HTML elements.
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+
+Class Component
+A class component must include the extends React.Component statement. This statement creates an inheritance to React.Component, and gives your component access to React.Component's functions.
+
+Function Component
+Here is the same example as above, but created using a Function component instead.
+
+A Function component also returns HTML, and behaves much the same way as a Class component, but Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.
+
+Note that the Components filename must start with an uppercase character.
+
+>>>
+
+React Props
+React Props are like function arguments in JavaScript and attributes in HTML.
+
+To send props into a component, use the same syntax as HTML attributes:
