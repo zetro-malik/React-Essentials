@@ -85,3 +85,4 @@ This will work as normal, the form will submit and the page will refresh.
 But this is generally not what we want to happen in React.
 
 We want to prevent this default behavior and let React control the form.
+this is used :  event.preventDefault();
