@@ -59,3 +59,15 @@ React Props
 React Props are like function arguments in JavaScript and attributes in HTML.
 
 To send props into a component, use the same syntax as HTML attributes:
+
+>>>
+
+React Events
+
+Just like HTML DOM events, React can perform actions based on user events.
+
+React has the same events as HTML: click, change, mouseover etc.
+
+React events are written in camelCase syntax:
+
+To pass an argument to an event handler, use an arrow function. because if executes the fucntion on page load without interaction
