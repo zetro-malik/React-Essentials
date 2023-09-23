@@ -24,6 +24,10 @@ import Blogs from "./pages/blog";
 import Contact from "./pages/contact";
 import NoPage from "./pages/nopage";
 
+import './app.css'
+
+import AppWithMemo from "./examples/userMemo";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -40,4 +44,4 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
+root.render(<AppWithMemo />);

@@ -90,3 +90,11 @@ this is used :  event.preventDefault();
 >>>
 
 Add React Router
+We wrap our content first with <BrowserRouter>.
+
+Then we define our <Routes>. An application can have multiple <Routes>. Our basic example only uses one.
+
+<Route>s can be nested. The first <Route> has a path of / and renders the Layout component.
+
+>>>
+Using memo will cause React to skip rendering a component if its props have not changed.
