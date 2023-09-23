@@ -86,3 +86,7 @@ But this is generally not what we want to happen in React.
 
 We want to prevent this default behavior and let React control the form.
 this is used :  event.preventDefault();
+
+>>>
+
+Add React Router
