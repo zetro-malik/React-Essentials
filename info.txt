@@ -71,3 +71,17 @@ React has the same events as HTML: click, change, mouseover etc.
 React events are written in camelCase syntax:
 
 To pass an argument to an event handler, use an arrow function. because if executes the fucntion on page load without interaction
+
+React Lists
+In React, you will render lists with some type of loop.
+
+The JavaScript map() array method is generally the preferred method.
+
+
+>>> in form submition
+
+This will work as normal, the form will submit and the page will refresh.
+
+But this is generally not what we want to happen in React.
+
+We want to prevent this default behavior and let React control the form.
