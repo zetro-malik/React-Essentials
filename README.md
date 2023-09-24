@@ -1,70 +1,200 @@
-# Getting Started with Create React App
+# React Notes
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React is a JavaScript library for building user interfaces.
 
-## Available Scripts
+- React is used to build single-page applications.
+- React allows us to create reusable UI components.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Virtual DOM
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Instead of manipulating the browser's DOM directly, React creates a virtual DOM in memory, where it does all the necessary manipulating before making the changes in the browser DOM. React only changes what needs to be changed!
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Rendering in React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+React renders HTML to the web page by using a function called `createRoot()` and its method `render()`. 
 
-### `npm run build`
+The `createRoot()` function takes one argument, an HTML element. Its purpose is to define the HTML element where a React component should be displayed. The `render()` method is then called to define the React component that should be rendered.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## What is JSX?
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+JSX stands for JavaScript XML.
 
-### `npm run eject`
+- JSX allows us to write HTML in React.
+- JSX makes it easier to write and add HTML in React.
+- JSX allows us to write HTML elements in JavaScript and place them in the DOM without any `createElement()` and/or `appendChild()` methods.
+- JSX is an extension of the JavaScript language based on ES6 and is translated into regular JavaScript at runtime.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+With JSX, you can write expressions inside curly braces `{}`. For example:
+x
+```jsx
+const myElement = <h1>React is {5 + 5} times better with JSX</h1>;
+```
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# React Components
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Components are like functions that return HTML elements. They are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Components come in two types, Class components and Function components. In this tutorial, we will concentrate on Function components.
 
-## Learn More
+## Class Component
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A class component must include the `extends React.Component` statement. This statement creates an inheritance to `React.Component` and gives your component access to `React.Component`'s functions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Function Component
 
-### Code Splitting
+Here is the same example as above, but created using a Function component instead.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+A Function component also returns HTML and behaves much the same way as a Class component. However, Function components can be written using much less code, are easier to understand, and will be preferred in this tutorial.
 
-### Analyzing the Bundle Size
+Note that the component's filename must start with an uppercase character.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+# React Props
 
-### Making a Progressive Web App
+React Props are like function arguments in JavaScript and attributes in HTML.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To send props into a component, use the same syntax as HTML attributes.
 
-### Advanced Configuration
+# React Events
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Just like HTML DOM events, React can perform actions based on user events.
 
-### Deployment
+React has the same events as HTML: click, change, mouseover, etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+React events are written in camelCase syntax.
 
-### `npm run build` fails to minify
+To pass an argument to an event handler, use an arrow function because it executes the function on page load without interaction.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# React Lists
+
+In React, you will render lists with some type of loop.
+
+The JavaScript `map()` array method is generally the preferred method.
+
+
+# Form Submission in React
+
+In form submission, this will work as normal, the form will submit and the page will refresh. But this is generally not what we want to happen in React. We want to prevent this default behavior and let React control the form. This is used: event.preventDefault();
+
+# Add React Router
+
+We wrap our content first with <BrowserRouter>. Then we define our <Routes>. An application can have multiple <Routes>. Our basic example only uses one. <Route>s can be nested. The first <Route> has a path of / and renders the Layout component.
+
+# Using memo in React
+
+Using memo will cause React to skip rendering a component if its props have not changed.
+
+# Styling React Using CSS
+
+There are different ways to style React components:
+
+- Inline Styling
+- CSS Stylesheets
+- CSS Modules
+
+1. Create a new file called "App.css" and insert some CSS code in it.
+2. Import the stylesheet in your application: import './App.css';
+
+CSS Modules
+
+1. Create the CSS module with the .module.css extension, for example, my-style.module.css.
+2. Use it like this: import styles from './my-style.module.css';
+
+---
+
+## What is a Hook?
+
+Hooks allow us to "hook" into React features such as state and lifecycle methods. Here we are using the useState Hook to keep track of the application state.
+
+State generally refers to application data or properties that need to be tracked.
+
+There are 3 rules for hooks:
+
+- Hooks can only be called inside React function components.
+- Hooks can only be called at the top level of a component.
+- Hooks cannot be conditional
+
+### Initialize useState
+
+We initialize our state by calling useState in our function component.
+
+useState accepts an initial state and returns two values:
+
+- The current state.
+- A function that updates the state.
+
+### What Can State Hold
+
+The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!
+
+We could create multiple state Hooks to track individual values.
+
+## React useEffect Hooks
+
+The useEffect Hook allows you to perform side effects in your components.
+
+Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+
+useEffect accepts two arguments. The second argument is optional.
+
+useEffect(<function>, <dependency>)
+
+useEffect runs on every render. That means that when the count changes, a render happens, which then triggers another effect. We should always include the second parameter which accepts an array. We can optionally pass dependencies to useEffect in this array.
+
+1. No dependency passed:   //Runs on every render
+2. An empty array:   //Runs only on the first render
+3. Props or state values: //Runs on the first render //And any time any dependency value changes
+
+## React useContext Hook
+
+React Context is a way to manage state globally.
+
+It can be used together with the useState Hook to share state between deeply nested components more easily than with useState alone. State should be held by the highest parent component in the stack that requires access to the state.
+
+## React useRef Hook
+
+The useRef Hook allows you to persist values between renders.
+
+It can be used to store a mutable value that does not cause a re-render when updated.
+
+It can be used to access a DOM element directly.
+
+### 1- Does Not Cause Re-renders
+
+If we tried to count how many times our application renders using the useState Hook, we would be caught in an infinite loop since this Hook itself causes a re-render.
+
+useRef() only returns one item. It returns an Object called current.
+
+When we initialize useRef we set the initial value: useRef(0).
+
+### 2- Accessing DOM Elements
+
+In general, we want to let React handle all DOM manipulation.
+
+But there are some instances where useRef can be used without causing issues.
+
+In React, we can add a ref attribute to an element to access it directly in the DOM.
+
+### Tracking State Changes
+
+The useRef Hook can also be used to keep track of previous state values.
+
+This is because we are able to persist useRef values between renders.
+
+## React useReducer Hook
+
+The useReducer Hook is similar to the useState Hook.
+
+It allows for custom state logic.
+
+If you find yourself keeping track of multiple pieces of state that rely on complex logic, useReducer may be useful.
+
+useReducer(<reducer>, <initialState>)
+
+The useReducer Hook returns the current state and a dispatch method.
