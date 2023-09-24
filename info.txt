@@ -115,3 +115,32 @@ CSS Modules
 Create the CSS module with the .module.css extension, example: my-style.module.css.
 use it like this;
 import styles from './my-style.module.css'; 
+
+
+>>>
+
+What is a Hook?
+Hooks allow us to "hook" into React features such as state and lifecycle methods.
+Here we are using the useState Hook to keep track of the application state.
+
+State generally refers to application data or properties that need to be tracked.
+
+There are 3 rules for hooks:
+
+Hooks can only be called inside React function components.
+Hooks can only be called at the top level of a component.
+Hooks cannot be conditional
+
+
+Initialize useState
+We initialize our state by calling useState in our function component.
+
+useState accepts an initial state and returns two values:
+
+The current state.
+A function that updates the state.
+
+What Can State Hold
+The useState Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!
+
+We could create multiple state Hooks to track individual values.

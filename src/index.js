@@ -23,12 +23,15 @@ import Home from "./pages/home";
 import Blogs from "./pages/blog";
 import Contact from "./pages/contact";
 import NoPage from "./pages/nopage";
-
 import './app.css'
 
 import CarCss from "./examples/cssModules";
 import FavoriteColorUseState from "./hooks/useState";
 import AppWithMemo from "./examples/userMemo";
+import TimerUseEffect from "./hooks/useEffect";
+import Component1 from "./hooks/useContext";
+
+import NotRerenderUseRef from "./hooks/useRef";
 
 export default function App() {
   return (
@@ -46,4 +49,4 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<FavoriteColorUseState />);
+root.render(<NotRerenderUseRef />);
