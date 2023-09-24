@@ -31,8 +31,8 @@ import AppWithMemo from "./examples/userMemo";
 import TimerUseEffect from "./hooks/useEffect";
 import Component1 from "./hooks/useContext";
 
-import NotRerenderUseRef from "./hooks/useRef";
-
+import TrackingStateChanges from "./hooks/useRef";
+ 
 export default function App() {
   return (
     <BrowserRouter>
@@ -49,4 +49,4 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<NotRerenderUseRef />);
+root.render(<TrackingStateChanges />);
