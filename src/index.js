@@ -34,6 +34,8 @@ import Component1 from "./hooks/useContext";
 import TrackingStateChanges from "./hooks/useRef";
 
 import UseReducerApiExample from "./hooks/useReducer";
+
+import FormUseReducer from "./hooks/useReducer-2";
  
 export default function App() {
   return (
@@ -51,4 +53,4 @@ export default function App() {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<UseReducerApiExample />);
+root.render(<FormUseReducer />);
