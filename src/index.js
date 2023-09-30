@@ -23,7 +23,7 @@ import Home from "./pages/home";
 import Blogs from "./pages/blog";
 import Contact from "./pages/contact";
 import NoPage from "./pages/nopage";
-import './app.css'
+// import './app.css'
 
 import CarCss from "./examples/cssModules";
 import FavoriteColorUseState from "./hooks/useState";
@@ -36,9 +36,13 @@ import TrackingStateChanges from "./hooks/useRef";
 import UseReducerApiExample from "./hooks/useReducer";
 
 import FormUseReducer from "./hooks/useReducer-2";
+
+import { store } from "./app/store";
+import { Provider } from "react-redux";
  
 export default function App() {
   return (
+    <Provider store={store}>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -49,8 +53,9 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </Provider>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<FormUseReducer />);
+root.render(<App />);
